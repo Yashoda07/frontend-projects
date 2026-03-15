@@ -25,4 +25,4 @@ This project was built for learning front-end web development concepts such as l
 ![Project Screenshot](screenshot.png)
 
 ## Live Demo
-https://yashoda07.github.io/web-designing-projects/youtube-clone/
+https://yashoda07.github.io/frontend-projects/youtube-clone/
