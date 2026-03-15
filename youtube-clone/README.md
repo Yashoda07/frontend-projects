@@ -18,28 +18,8 @@ The project replicates the visual structure of YouTube including the header, sid
 - CSS3
 - Google Fonts (Roboto)
 
-## Project Structure
-youtube-clone
-│
-├── YoutubeClone.html
-├── README.md
-├── screenshot.png
-│
-├── icons
-│ └── SVG icons used in the header and sidebar
-│
-├── imgs
-│ └── Video thumbnails and channel images
-│
-└── style
-├── style.css
-├── general.css
-├── header.css
-├── sidebar.css
-└── video.css
-
 ## Purpose of the Project
 This project was built for learning front-end web development concepts such as layout structuring, reusable components, and CSS styling techniques.
 
-## Screenshot
+## Project Review
 ![Project Screenshot](screenshot.png)
