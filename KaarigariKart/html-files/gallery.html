@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Art Gallery - KaarigariKart</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="gallery.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+<header>
+<div>
+<h1>KarigariKart</h1>
+<p class="tagline">Gallery of Indian Art</p>
+</div>
+</header>
+
+<nav>
+<ul>
+<li><a href="index.html">Home</a></li>
+
+<li>
+<a href="#" onclick="toggleDropdown(event)">Gallery ▾</a>
+<ul id="galleryMenu" style="display:none;">
+<li><a href="#painting">Paintings</a></li>
+<li><a href="#crocheting">Crocheting</a></li>
+<li><a href="#knitting">Knitting</a></li>
+<li><a href="#more">Other Treasures</a></li>
+</ul>
+</li>
+
+<li><a href="filter.html">Filter</a></li>
+<li><a href="cart.html">Wishlist</a></li>
+<li><a href="checkout.html">CheckOut</a></li>
+</ul>
+</nav>
+
+<script>
+$(document).ready(function(){
+  $("nav li a:contains('Gallery')").click(function(e){
+    e.preventDefault();
+    $("#galleryMenu").slideToggle("fast");
+  });
+});
+</script>
+
+<section id="painting" class="gallery-section" style= "background-image: url(bg.jpg); background-color: rgba(255,220,230,0.5); background-blend-mode: overlay;">
+<h2 style = "font-family: 'lucida handwriting'">Paintings</h2>
+
+<div class="gallery-row">
+  <div class="product-card"><img src="sunset.jpg"><h3>Sunset Melody</h3>
+  <p>Watercolor inspired by rural evening skies.</p><p><b>Price:</b> ₹899</p>
+  <button onclick="addToCart('Sunset Melody')">Add to Cart</button></div>
+  <div class="product-card"><img src="peacock1.jpg"><h3>Peacock Pride</h3>
+  <p>Madhubani-style peacock art celebrating beauty and grace.</p><p><b>Price:</b> ₹1499</p>
+  <button onclick="addToCart('Peacock Pride')">Add to Cart</button></div>
+  <div class="product-card"><img src="lotus.jpg"><h3>Lotus Serenity</h3>
+  <p>Acrylic on canvas, symbolizing peace and spiritual beauty.</p><p><b>Price:</b> ₹849</p>
+  <button onclick="addToCart('Lotus Serenity')">Add to Cart</button></div>
+  <div class="product-card"><img src="bridge.jpg"><h3>Spring Bridge</h3>
+  <p>charming spring bridge surrounded by trees in full bloom.</p><p><b>Price:</b> ₹999</p>
+  <button onclick="addToCart('Spring Bridge')">Add to Cart</button></div>
+</div>
+
+<div class="gallery-row">
+  <div class="product-card"><img src="village.jpg"><h3>Village Vibes</h3>
+  <p>Rustic charm in earthy tones — inspired by rural India.</p><p><b>Price:</b> ₹849</p>
+  <button onclick="addToCart('Village Vibes')">Add to Cart</button></div>
+  <div class="product-card"><img src="swans.jpg"><h3>Charming Swans</h3>
+  <p>Acrylic on canvas, symbolizing peace and loving beauty.</p><p><b>Price:</b> ₹1199</p>
+  <button onclick="addToCart('Charming Swans')">Add to Cart</button></div>
+  <div class="product-card"><img src="warli.jpg"><h3>Tribal Glow</h3>
+  <p>Warli art on handmade sheet. Pure tradition, pure love.</p><p><b>Price:</b> ₹1050</p>
+  <button onclick="addToCart('Tribal Glow')">Add to Cart</button></div>
+  <div class="product-card"><img src="abstract.jpg"><h3>Abstract Bloom</h3>
+  <p>Color splash for modern homes. Expressive and bold.</p><p><b>Price:</b> ₹1299</p>
+  <button onclick="addToCart('Abstract Bloom')">Add to Cart</button></div>
+</div>
+</section>
+
+<section id="crocheting" class="gallery-section" style= "background-image: url(bg.jpg); background-color: rgba(255,220,230,0.5); background-blend-mode: overlay">
+<h2 style = "font-family: 'lucida handwriting'">Crocheting</h2>
+<div class="gallery-row">
+  <div class="product-card"><img src="coinpouch.jpg"><h3>Floral Coin Pouch</h3>
+  <p>Hand-crocheted mini pouch with closure. Cute & useful!</p><p><b>Price:</b> ₹299</p>
+  <button onclick="addToCart('Floral Coin Pouch')">Add to Cart</button></div>
+  <div class="product-card"><img src="bunny.jpg"><h3>Amigurumi Toys</h3>
+  <p>Soft toys perfect for gifts and decor. Adorable!</p><p><b>Price:</b> ₹699</p>
+  <button onclick="addToCart('Amigurumi Toys')">Add to Cart</button></div>
+  <div class="product-card"><img src="coaster.jpg"><h3>Boho Coaster Set</h3>
+  <p>Set of 4 vibrant coasters to add a pop to your table!</p><p><b>Price:</b> ₹1199</p>
+  <button onclick="addToCart('Boho Coaster Set')">Add to Cart</button></div>
+  <div class="product-card"><img src="flowers.jpg"><h3>Flower Bouquet</h3>
+  <p>crochet roses of 2 different sizes with leaves!</p><p><b>Price:</b> ₹1399</p>
+  <button onclick="addToCart('Flower Bouquet')">Add to Cart</button></div>
+</div>
+</section>
+
+<section id="knitting" class="gallery-section" style= "background-image: url(bg.jpg); background-color: rgba(255,220,230,0.5); background-blend-mode: overlay">
+<h2 style = "font-family: 'lucida handwriting'">Knitting</h2>
+<div class="gallery-row">
+  <div class="product-card"><img src="sweater.jpg"><h3>Outer Jacket</h3>
+  <p>Lavender Daisy Granny square aesthetic jackets .</p><p><b>Price:</b> ₹999</p>
+  <button onclick="addToCart('Outer Jacket')">Add to Cart</button></div>
+  <div class="product-card"><img src="book.jpg"><h3>Book Cover</h3>
+  <p>New pattern knitted Book Covers for you.</p><p><b>Price:</b> ₹499</p>
+  <button onclick="addToCart('Book Cover')">Add to Cart</button></div>
+  <div class="product-card"><img src="blanket.jpg"><h3>Trending Flower Blanket</h3>
+  <p>Handmade Trending Flower Blanket</p><p><b>Price:</b> ₹1299</p>
+  <button onclick="addToCart('Trending Flower Blanket')">Add to Cart</button></div>
+  <div class="product-card"><img src="tote.jpg"><h3>Tote Bags</h3>
+  <p>New pattern knitted Tote Bags for you.</p><p><b>Price:</b> ₹499</p>
+  <button onclick="addToCart('Tote Bags')">Add to Cart</button></div>
+</div>
+</section>
+
+<section id="Maharashtra" class="gallery-section" style= "background-image: url(bg.jpg); background-color: rgba(255,220,230,0.5); background-blend-mode: overlay">
+<h2 style = "font-family: 'lucida handwriting'">Maharashtra's magic!</h2>
+<div class="gallery-row">
+  <div class="product-card"><img src="saree.jpg"><h3>Paithani Saree</h3>
+  <p>Luxurious silk sarees with gold & silk threadwork.</p><p><b>Price:</b> ₹7999</p>
+  <button onclick="addToCart('Paithani Saree')">Add to Cart</button></div>
+  <div class="product-card"><img src="warlii.jpg"><h3>Warli Paintings</h3>
+  <p>Tribal art using simple geometric shapes.</p><p><b>Price:</b> ₹1499</p>
+  <button onclick="addToCart('Warli Paintings')">Add to Cart</button></div>
+  <div class="product-card"><img src="bidri.jpg"><h3>Bidriware</h3>
+  <p>Beautiful Bidri with a regal lineage, Crafted from gun metal with striking pure silver inlay.</p><p><b>Price:</b> ₹999</p>
+  <button onclick="addToCart('Bidriware')">Add to Cart</button><h4>Featured ✪</h4></div>
+  <div class="product-card"><img src="kolhapuri.jpg"><h3>Kolhapuri Chappals</h3>
+  <p>Handcrafted leather sandals, known for durability and unique designs.</p><p><b>Price:</b> ₹2499</p>
+  <button onclick="addToCart('Kolhapuri Chappals')">Add to Cart</button></div>
+</div>
+</section>
+
+<section id="Gujarat" class="gallery-section" style= "background-image: url(bg.jpg); background-color: rgba(255,220,230,0.5); background-blend-mode: overlay">
+<h2 style = "font-family: 'lucida handwriting'">Gujarat's Greatness!</h2>
+<div class="gallery-row">
+  <div class="product-card"><img src="cloth.jpg"><h3>Bandhani Tie-Dye</h3>
+  <p>Vibrant hand-stitched Kantha patterns on an eco tote.</p><p><b>Price:</b> ₹899</p>
+  <button onclick="addToCart('Bandhani Tie-Dye')">Add to Cart</button></div>
+  <div class="product-card"><img src="rogan.jpg"><h3>Rogan Art</h3>
+  <p>Sets of Jaipur-style ceramic bowl with intricate floral designs.</p><p><b>Price:</b> ₹999</p>
+  <button onclick="addToCart('Rogan Art')">Add to Cart</button><h4>Featured ✪</h4></div>
+  <div class="product-card"><img src="kutchi.jpg"><h3>Kutchi Embroidery</h3>
+  <p>Clay plate with traditional Warli dance motifs.</p><p><b>Price:</b> ₹1999</p>
+  <button onclick="addToCart('Kutchi Embroidery')">Add to Cart</button></div>
+  <div class="product-card"><img src="art.jpg"><h3>Glass Art</h3>
+  <p>Sets of Jaipur-style ceramic bowl with intricate floral designs.</p><p><b>Price:</b> ₹1799</p>
+  <button onclick="addToCart('Glass Art')">Add to Cart</button></div>
+</div>
+</section>
+
+<section id="Kerala" class="gallery-section" style= "background-image: url(bg.jpg); background-color: rgba(255,220,230,0.5); background-blend-mode: overlay">
+<h2 style = "font-family: 'lucida handwriting'">Kerala ki Kaarigari!</h2>
+<div class="gallery-row">
+  <div class="product-card"><img src="aruva.jpg"><h3>Aruvacode Terracotta</h3>
+  <p>Sets of Jaipur-style ceramic bowl with intricate floral designs.</p><p><b>Price:</b> ₹1999</p>
+  <button onclick="addToCart('Aruvacode Terracotta')">Add to Cart</button><h4>Featured ✪</h4></div>
+  <div class="product-card"><img src="kerala.jpg"><h3>Kasavu Handloom Sarees</h3>
+  <p>Vibrant hand-stitched Kantha patterns on an eco tote.</p><p><b>Price:</b> ₹4999</p>
+  <button onclick="addToCart('Kasavu Handloom Sarees')">Add to Cart</button></div>
+  <div class="product-card"><img src="koir.jpg"><br><br><h3>Coconut and Koir Crafts</h3>
+  <p>Clay plate with traditional Warli dance motifs.</p><p><b>Price:</b> ₹1199</p>
+  <button onclick="addToCart('Coconut and Koir Crafts')">Add to Cart</button></div>
+  <div class="product-card"><img src="narr.jpg"><h3>Nettipattam Decor</h3>
+  <p>Sets of Jaipur-style ceramic bowl with intricate floral designs.</p><p><b>Price:</b> ₹999</p>
+  <button onclick="addToCart('Nettipattam Decor')">Add to Cart</button></div>
+</div>
+</section>
+
+<section id="Rajasthan" class="gallery-section" style= "background-image: url(bg.jpg); background-color: rgba(255,220,230,0.5); background-blend-mode: overlay">
+<h2 style = "font-family: 'lucida handwriting'">Rajasthan's Royalty!</h2>
+<div class="gallery-row">
+  <div class="product-card"><img src="pot.jpg"><h3>Blue Pottery</h3>
+  <p>Vibrant hand-stitched Kantha patterns on an eco tote.</p><p><b>Price:</b> ₹1699</p>
+  <button onclick="addToCart('Blue Pottery')">Add to Cart</button></div>
+  <div class="product-card"><img src="phad.jpg"><h3>Phad Paintings</h3>
+  <p>Clay plate with traditional Warli dance motifs.</p><p><b>Price:</b> ₹899</p>
+  <button onclick="addToCart('Phad Paintings')">Add to Cart</button></div>
+  <div class="product-card"><img src="meenakari.jpg"><h3>Meenakari Jewellery</h3>
+  <p>Sets of Jaipur-style ceramic bowl with intricate floral designs.</p><p><b>Price:</b> ₹1199</p>
+  <button onclick="addToCart('Meenakari Jewellery')">Add to Cart</button></div>
+  <div class="product-card"><img src="laath.jpg"><h3>Laakh Bangles</h3>
+  <p>Sets of Jaipur-style ceramic bowl with intricate floral designs.</p><p><b>Price:</b> ₹499(set of 2)      </p>
+  <button onclick="addToCart('Pottery Bowl')">Add to Cart</button><h4>Featured ✪</h4></div>
+</div>
+</section>
+
+<section id="Uttar Pradesh" class="gallery-section" style= "background-image: url(bg.jpg); background-color: rgba(255,220,230,0.5); background-blend-mode: overlay">
+<h2 style = "font-family: 'lucida handwriting'">Uttar Pradesh ka Utsaah!</h2>
+<div class="gallery-row">
+  <div class="product-card"><img src="banarasi.jpg"><h3>Banarasi Silk Sarees</h3>
+  <p>Vibrant hand-stitched Kantha patterns on an eco tote.</p><p><b>Price:</b> ₹9999</p>
+  <button onclick="addToCart('Banarasi Silk Sarees')">Add to Cart</button></div>
+  <div class="product-card"><img src="wood.jpg"><h3>Woodcarving</h3>
+  <p>Sets of Jaipur-style ceramic bowl with intricate floral designs.</p><p><b>Price:</b> ₹999</p>
+  <button onclick="addToCart('Woodcarving')">Add to Cart</button><h4>Featured ✪</h4></div>
+  <div class="product-card"><img src="chickenkari.jpg"><h3>Chickenkari Embroidery</h3>
+  <p>Clay plate with traditional Warli dance motifs.</p><p><b>Price:</b> ₹2499</p>
+  <button onclick="addToCart('Chickenkari Embroidery')">Add to Cart</button></div>
+  <div class="product-card"><img src="zardosi.jpg"><h3>Zardosi Embroidery</h3>
+  <p>Sets of Jaipur-style ceramic bowl with intricate floral designs.</p><p><b>Price:</b> ₹999</p>
+  <button onclick="addToCart('Zardosi Embroidery')">Add to Cart</button></div>
+</div>
+</section>
+
+<section id="more" class="gallery-section" style= "background-image: url(bg.jpg); background-color: rgba(255,220,230,0.5); background-blend-mode: overlay">
+<h2 style = "font-family: 'lucida handwriting'">Other Treasures</h2>
+<div class="gallery-row">
+  <div class="product-card"><img src="kantha.jpg"><h3>Kantha Patch Tote</h3>
+  <p>Vibrant hand-stitched Kantha patterns on an eco tote.</p><p><b>Price:</b> ₹899</p>
+  <button onclick="addToCart('Kantha Patch Tote')">Add to Cart</button></div>
+  <div class="product-card"><img src="warliplate.jpg"><h3>Warli Wall Plate</h3>
+  <p>Clay plate with traditional Warli dance motifs.</p><p><b>Price:</b> ₹1999</p>
+  <button onclick="addToCart('Warli Wall Plate')">Add to Cart</button></div>
+  <div class="product-card"><img src="pottery.jpg"><h3>Pottery Bowl</h3>
+  <p>Sets of Jaipur-style ceramic bowl with intricate floral designs.</p><p><b>Price:</b> ₹999</p>
+  <button onclick="addToCart('Pottery Bowl')">Add to Cart</button></div>
+  <div class="product-card"><img src="gaay.jpg"><h3>Pichwai Paintings</h3>
+  <p>Clay plate with traditional Warli dance motifs.</p><p><b>Price:</b> ₹899</p>
+  <button onclick="addToCart('Pichwai Paintings')">Add to Cart</button></div>
+</div>
+</section>
+
+<script>
+$(document).ready(function(){
+  $("a[href^='#']").click(function(e){
+    e.preventDefault();
+    $("html, body").animate({ 
+      scrollTop: $($(this).attr("href")).offset().top 
+    }, 600);
+  });
+});
+</script>
+
+<script>
+$(document).ready(function(){
+  $(".product-card").hover(
+    function(){ $(this).css("transform","scale(1.05)").css("box-shadow","0 0 15px pink"); },
+    function(){ $(this).css("transform","scale(1)").css("box-shadow","none"); }
+  );
+});
+</script>
+
+<script>
+  var cartItems = localStorage.getItem("cart");
+  if (!cartItems) {
+    cartItems = "";
+  }
+
+  function addToCart(itemName) {
+    cartItems = cartItems + itemName + ",";
+    localStorage.setItem("cart", cartItems);
+    alert(itemName + " added to cart!");
+  }
+</script>
+
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $(this).fadeOut(100).fadeIn(100).css("background-color","lightgreen");
+  });
+});
+</script>
+
+<footer>
+<p>Made by Yashoda, All Rights Reserved &copy; 2025 | Contact: <a href="mailto:yashoda786@gmail.com">yashoda786@gmail.com</a></p>
+</footer>
+
+</body>
+</html>
+
